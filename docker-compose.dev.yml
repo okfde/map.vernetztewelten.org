@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  db:
+    image: mdillon/postgis
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  backend:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    environment:
+      DEBUG: 1
+      PYTHONUNBUFFERED: 1
+      DATABASE_URL: postgis://postgres@db:5432/postgres
+    volumes:
+      - "./manage.py:/code/manage.py"
+      - "./vernetztemap:/code/vernetztemap"
+      - "./static:/code/static"
+      - "./uploads:/code/uploads"
+    links:
+      - db
+    ports:
+      - 127.0.0.1:8001:8001
+    command: "python manage.py runserver 0.0.0.0:8001"
+
+volumes:
+  postgres-data: {}
+

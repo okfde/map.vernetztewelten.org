@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+umap-env/
+.env
+uploads/
+static/

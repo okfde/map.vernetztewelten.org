@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load i18n static %}
+
+{% block content %}
+    <div class="content404">
+        <a href="/" title="{% trans 'Bring mich zurück zur Startseite.' %}">
+            <h1>404</h1>
+            <h2>Not Found</h2>
+        </a>
+    </div>
+    <div><img src="{% static 'umap/img/logo.svg' %}"></div>
+	<div id="back_to_goethe">
+    	<ul id="links_to_goethe">
+    		<li><a href="https://goethe.de">Goethe Institut</a></li>
+    		<li><a href="https://medialepfade.de">mediale Pfade e.V.</a></li>
+    		<li><a href="https://okfn.de">Open Knowledge Foundation</a></li>
+    		<li><a href="https://vrntztwltn.de">Vernetzte Welten</a></li>
+    	</ul>
+	</div>
+{% endblock %}
