@@ -3,4 +3,4 @@ __pycache__
 umap-env/
 .env
 uploads/
-static/
+public/

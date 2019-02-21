@@ -185,7 +185,7 @@ STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder',
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 # UMap specific
