@@ -8,7 +8,7 @@ ENV PYTHONPATH /code
 COPY manage.py manage.py
 COPY vernetztemap vernetztemap
 
-RUN python manage.py collectstatic --noinput
+RUN mkdir static && python manage.py collectstatic --noinput
 RUN python manage.py compress -f
 
 COPY static /code/static
