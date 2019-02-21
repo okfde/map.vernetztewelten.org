@@ -1,0 +1,100 @@
+body {
+  background-color: #f8f8f6;
+}
+
+body.content {
+  width: 70%;
+  height: 100%;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.umap-nav h1 a {
+  background-image: url(./img/logo.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  line-height: 100px;
+  padding-left: 110px;
+  display: block;
+  color: #A0C814;
+}
+
+html body.content header.wrapper.row nav.umap-nav section ul {
+  width: 0;
+}
+
+.umap-nav h1 a {
+  margin-top: 30px;
+  font-size: calc(1em + 1vw);
+  line-height: calc(2em + 1vw);
+}
+
+.login {
+  isibility: hidden;
+}
+
+.umap-nav .button {
+  background-color: #a0c814;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.umap-nav .button:hover {
+  text-decoration: underline;
+}
+
+input.neutral {
+  font-size: medium;
+}
+
+.col.quarter.mwide a {
+  color: #47abd8;
+}
+
+.col.quarter.mwide a:hover {
+  text-decoration: underline;
+}
+
+p.note a {
+  color: #47abd8;
+}
+
+p.note a:hover {
+  text-decoration: underline;
+}
+
+.button-bar .button {
+  background-color: #a0c814;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.button-bar .button:hover {
+  text-decoration: underline;
+}
+
+a.leaflet-control-edit-save.button {
+  background-color: #A0C814;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+a.leaflet-control-edit-save.button:hover {
+  background-color: #708b0e;
+}
+
+a.leaflet-control-edit-cancel.button {
+  background-color: #929a9e;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a.leaflet-control-edit-cancel.button:hover{
+  background-color: red;
+}
+
+.partner-logos img {
+  height: 80px;
+  margin: 0 1rem;
+}
