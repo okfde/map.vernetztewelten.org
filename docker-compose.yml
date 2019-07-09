@@ -11,10 +11,6 @@ services:
       context: "."
       dockerfile: Dockerfile
     env_file: ".env"
-    environment:
-      DEBUG: 0
-      PYTHONUNBUFFERED: 1
-      DATABASE_URL: postgis://postgres@db:5432/postgres
     volumes:
       - "./uploads:/code/uploads"
     links:
