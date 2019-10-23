@@ -11,6 +11,4 @@ COPY vernetztemap vernetztemap
 RUN python manage.py collectstatic --noinput
 RUN python manage.py compress -f
 
-COPY static /code/static
-
 CMD python manage.py runserver 0.0.0.0:8000
