@@ -5,19 +5,16 @@ services:
     image: mdillon/postgis
     ports: []
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ./volumes/postgres-data:/var/lib/postgresql/data
   backend:
     build:
       context: "."
       dockerfile: Dockerfile
     env_file: ".env"
     volumes:
-      - "./uploads:/code/uploads"
+      - ./volumes/uploads:/code/uploads
     links:
       - db
     ports:
       - 127.0.0.1:8001:8001
     command: "gunicorn --workers=4 --bind=0.0.0.0:8001 --access-logfile=- --error-logfile=- --log-level=info vernetztemap.wsgi:application"
-
-volumes:
-  postgres-data: {}
